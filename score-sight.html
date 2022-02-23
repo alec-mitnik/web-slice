@@ -1,0 +1,601 @@
+<!Doctype HTML>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo:400,500,600,700">
+<link rel="stylesheet" href="./score-sight.css">
+</head>
+
+<body>
+	<h1>ScoreSight</h1>
+	<h2 class="subheader">Understand your score potential and the actions needed to get there.</h2>
+	
+	<div class="tab-navigation top-spacing-40">
+		<button type="button" class="tab selected">
+			<h3>Target Score</h3>
+		</button>
+		<button type="button" class="tab">
+			<h3>Debt Payment</h3>
+		</button>
+	</div>
+	
+	<div class="desktop-top-spacing-32 top-spacing-20">
+		<div class="row gap-24">
+			<div class="column">
+				<div class="box">
+					<h3>How to use</h3>
+					<p class="mobile-gray">
+						First, select a target credit score. See what actions are available to reach this potential new score.
+					</p>
+				</div>
+			</div>
+			<div class="column desktop">
+				<!-- Space left blank -->
+			</div>
+		</div>
+		
+		<div class="row mobile-column-reverse gap-36 desktop-gap-24 desktop-top-spacing-40 top-spacing-30">
+			<div class="column">
+				<h2>Target Score</h2>
+				<div class="row gap-18 desktop-top-spacing-36 top-spacing-12">
+					<div class="column column-3">
+						<input type="number" class="target-input" value="670" min="300" max="850" />
+					</div>
+					<div class="desktop column column-2">
+						<button type="button" class="target-button">Set Target</button>
+					</div>
+				</div>
+				<div class="desktop-top-spacing-20 top-spacing-24">
+					<input id="target-range-input" type="range" class="target-range" value="670" min="300" max="850" />
+					<div class="row relative desktop-top-spacing-0 top-spacing-4">
+						<label id="target-range-label-300" for="target-range-input" class="target-range-label">300</label>
+						<label id="target-range-label-560" for="target-range-input" class="target-range-label">560</label>
+						<label id="target-range-label-750" for="target-range-input" class="target-range-label">750</label>
+						<label id="target-range-label-850" for="target-range-input" class="target-range-label">850</label>
+					</div>
+				</div>
+				<div class="mobile top-spacing-24">
+					<button type="button" class="target-button">
+						Set Target
+					</button>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div class="row potential-impact-right-spacing-no-border">
+					<div class="column desktop">
+						<!-- Space left blank -->
+					</div>
+					<div class="column column-5">
+						<h2>Credit Scores</h2>
+						<div class="row desktop-gap-28 gap-8 desktop-top-spacing-24 top-spacing-10">
+							<div class="column">
+								<img id="credit-logo-transunion" src="./transunion.svg" class="credit-logo" alt="TransUnion" />
+							</div>
+							<div class="column">
+								<img id="credit-logo-equifax" src="./Equifax@3x.svg" class="credit-logo" alt="Equifax" />
+							</div>
+							<div class="column">
+								<img id="credit-logo-experian" src="./experian_logo@3x.svg" class="credit-logo" alt="Experian" />
+							</div>
+						</div>
+						<div class="row desktop-gap-28 gap-8 desktop-top-spacing-20 top-spacing-8">
+							<div class="column">
+								<div class="horizontal-line"></div>
+							</div>
+							<div class="column">
+								<div class="horizontal-line"></div>
+							</div>
+							<div class="column">
+								<div class="horizontal-line"></div>
+							</div>
+						</div>
+						<div class="row desktop-gap-28 gap-8 desktop-top-spacing-8 top-spacing-4">
+							<div class="column">
+								<p class="credit-score">659</p>
+							</div>
+							<div class="column">
+								<p class="credit-score">660</p>
+							</div>
+							<div class="column">
+								<p class="credit-score">659</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="top-spacing-48 mobile">
+			<h2>Potential Impact</h2>
+			<div class="top-spacing-10 rounded-border-impact-container">
+				<div class="row gap-28">
+					<div class="column">
+						<div class="row row-align-center">
+							<p class="credit-score impact">679</p>
+							<div class="impact-info">
+								<img src="./triangle-icon.svg" class="impact-icon" alt="Score Increase" />
+								<p class="impact-change">20</p>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="row row-align-center">
+							<p class="credit-score impact">678</p>
+							<div class="impact-info">
+								<img src="./triangle-icon.svg" class="impact-icon" alt="Score Increase" />
+								<p class="impact-change">18</p>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="row row-align-center">
+							<p class="credit-score impact">678</p>
+							<div class="impact-info">
+								<img src="./triangle-icon.svg" class="impact-icon" alt="Score Increase" />
+								<p class="impact-change">19</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row gap-28">
+					<div class="column">
+						<h3 class="impact">TransUnion</h3>
+					</div>
+					<div class="column">
+						<h3 class="impact">Equifax</h3>
+					</div>
+					<div class="column">
+						<h3 class="impact">Experian</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="top-spacing-36 mobile">
+			<h2>Recommended Actions</h2>
+			<p class="top-spacing-4 mobile-gray">
+				These recommendations are only estimates. They do not take into consideration future factors like balance changes and late payments.
+			</p>
+		</div>
+		
+		<div class="top-spacing-36 actions-impact-container desktop">
+			<div class="row gap-24">
+				<div class="column">
+					<div class="recommended-actions-left-spacing">
+						<h2>Recommended Actions</h2>
+						<p class="top-spacing-24">
+							These recommendations are only estimates. They do not take into consideration future factors like balance changes and late payments.
+						</p>
+					</div>
+				</div>
+				<div class="column">
+					<div class="row potential-impact-right-spacing">
+						<div class="column">
+							<!-- Space left blank -->
+						</div>
+						<div class="column column-5">
+							<h2>Potential Impact</h2>
+							<div class="row gap-28 top-spacing-16">
+								<div class="column">
+									<div class="row row-align-center">
+										<p class="credit-score impact">679</p>
+										<div class="impact-info">
+											<img src="./triangle-icon.svg" class="impact-icon" alt="Score Increase" />
+											<p class="impact-change">20</p>
+										</div>
+									</div>
+								</div>
+								<div class="column">
+									<div class="row row-align-center">
+										<p class="credit-score impact">678</p>
+										<div class="impact-info">
+											<img src="./triangle-icon.svg" class="impact-icon" alt="Score Increase" />
+											<p class="impact-change">18</p>
+										</div>
+									</div>
+								</div>
+								<div class="column">
+									<div class="row row-align-center">
+										<p class="credit-score impact">678</p>
+										<div class="impact-info">
+											<img src="./triangle-icon.svg" class="impact-icon" alt="Score Increase" />
+											<p class="impact-change">19</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row gap-24 top-spacing-44">
+				<div class="column">
+					<div class="row gap-28 recommended-actions-left-spacing">
+						<div class="column column-3">
+							<h3 class="action-column-header">Action</h3>
+						</div>
+						<div class="column column-2">
+							<h3 class="action-column-header">Account</h3>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="row potential-impact-right-spacing">
+						<div class="column">
+							<!-- Space left blank -->
+						</div>
+						<div class="column column-5">
+							<div class="row gap-28">
+								<div class="column">
+									<h3 class="impact">TransUnion</h3>
+								</div>
+								<div class="column">
+									<h3 class="impact">Equifax</h3>
+								</div>
+								<div class="column">
+									<h3 class="impact">Experian</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="actions desktop">
+			<div class="action gap-24 row row-align-center">
+				<div class="column">
+					<div class="row row-align-center gap-28 recommended-actions-left-spacing">
+						<div class="column column-3 row">
+							<img src="./alerts-icon.svg" class="action-icon" alt="Payment Card Icon" />
+							<p class="action-text column">Make an On-time Payment</p>
+						</div>
+						<div class="column column-2">
+							<p class="action-account">BK OF AMER #456 9356 ****</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="row potential-impact-right-spacing">
+						<div class="column">
+							<!-- Space left blank -->
+						</div>
+						<div class="column column-5">
+							<div class="row gap-28">
+								<div class="column">
+									<div class="row">
+										<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+										<p class="action-impact">3 pts</p>
+									</div>
+								</div>
+								<div class="column">
+									<div class="row">
+										<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+										<p class="action-impact">2 pts</p>
+									</div>
+								</div>
+								<div class="column">
+									<div class="row">
+										<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+										<p class="action-impact">3 pts</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="action gap-24 row row-align-center">
+				<div class="column">
+					<div class="row row-align-center gap-28 recommended-actions-left-spacing">
+						<div class="column column-3 row">
+							<img src="./alerts-icon.svg" class="action-icon" alt="Payment Card Icon" />
+							<p class="action-text column">Make an On-time Payment</p>
+						</div>
+						<div class="column column-2">
+							<p class="action-account">JPMCB CARD #736 4625 ****</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="row potential-impact-right-spacing">
+						<div class="column">
+							<!-- Space left blank -->
+						</div>
+						<div class="column column-5">
+							<div class="row gap-28">
+								<div class="column">
+									<div class="row">
+										<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+										<p class="action-impact">3 pts</p>
+									</div>
+								</div>
+								<div class="column">
+									<div class="row">
+										<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+										<p class="action-impact">3 pts</p>
+									</div>
+								</div>
+								<div class="column">
+									<div class="row">
+										<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+										<p class="action-impact">2 pts</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="action gap-24 row row-align-center">
+				<div class="column">
+					<div class="row row-align-center gap-28 recommended-actions-left-spacing">
+						<div class="column column-3 row">
+							<img src="./simulator-icon.svg" class="action-icon" alt="Increase Limit Icon" />
+							<p class="action-text column">Increase credit limit</p>
+						</div>
+						<div class="column column-2">
+							<p class="action-account">BK OF AMER #456 9356 ****</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="row potential-impact-right-spacing">
+						<div class="column">
+							<!-- Space left blank -->
+						</div>
+						<div class="column column-5">
+							<div class="row gap-28">
+								<div class="column">
+									<div class="row">
+										<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+										<p class="action-impact">3 pts</p>
+									</div>
+								</div>
+								<div class="column">
+									<div class="row">
+										<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+										<p class="action-impact">3 pts</p>
+									</div>
+								</div>
+								<div class="column">
+									<div class="row">
+										<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+										<p class="action-impact">3 pts</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="action gap-24 row row-align-center">
+				<div class="column">
+					<div class="row row-align-center gap-28 recommended-actions-left-spacing">
+						<div class="column column-3 row">
+							<img src="./pay-icon.svg" class="action-icon pay-icon" alt="Pay Icon" />
+							<p class="action-text column">Pay down debt</p>
+						</div>
+						<div class="column column-2">
+							<p class="action-account">BK OF AMER #456 9356 ****</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="row potential-impact-right-spacing">
+						<div class="column">
+							<!-- Space left blank -->
+						</div>
+						<div class="column column-5">
+							<div class="row gap-28">
+								<div class="column">
+									<div class="row">
+										<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+										<p class="action-impact">2 pts</p>
+									</div>
+								</div>
+								<div class="column">
+									<div class="row">
+										<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+										<p class="action-impact">2 pts</p>
+									</div>
+								</div>
+								<div class="column">
+									<div class="row">
+										<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+										<p class="action-impact">2 pts</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mobile top-spacing-28">
+			<div class="row action-header">
+				<img src="./alerts-icon.svg" class="action-icon" alt="Payment Card Icon" />
+				<p class="action-text column">Make an On-time Payment</p>
+			</div>
+			<div class="action-body">
+				<p class="action-account">BK OF AMER #456 9356 ****</p>
+				<p class="top-spacing-4">
+					Making a payment on this acount could result in a 3 point score increaase.
+				</p>
+				<div class="row gap-28 top-spacing-28">
+					<div class="column">
+						<p>TransUnion</p>
+					</div>
+					<div class="column">
+						<p>Equifax</p>
+					</div>
+					<div class="column">
+						<p>Experian</p>
+					</div>
+				</div>
+				<div class="row gap-28 top-spacing-10">
+					<div class="column">
+						<div class="row">
+							<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+							<p class="action-impact">3 pts</p>
+						</div>
+					</div>
+					<div class="column">
+						<div class="row">
+							<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+							<p class="action-impact">2 pts</p>
+						</div>
+					</div>
+					<div class="column">
+						<div class="row">
+							<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+							<p class="action-impact">3 pts</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mobile top-spacing-16">
+			<div class="row action-header">
+				<img src="./alerts-icon.svg" class="action-icon" alt="Payment Card Icon" />
+				<p class="action-text column">Make an On-time Payment</p>
+			</div>
+			<div class="action-body">
+				<p class="action-account">JPMCB CARD #736 4625 ****</p>
+				<p class="top-spacing-4">
+					Making a payment on this acount could result in a 3 point score increaase.
+				</p>
+				<div class="row gap-28 top-spacing-28">
+					<div class="column">
+						<p>TransUnion</p>
+					</div>
+					<div class="column">
+						<p>Equifax</p>
+					</div>
+					<div class="column">
+						<p>Experian</p>
+					</div>
+				</div>
+				<div class="row gap-28 top-spacing-10">
+					<div class="column">
+						<div class="row">
+							<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+							<p class="action-impact">3 pts</p>
+						</div>
+					</div>
+					<div class="column">
+						<div class="row">
+							<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+							<p class="action-impact">3 pts</p>
+						</div>
+					</div>
+					<div class="column">
+						<div class="row">
+							<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+							<p class="action-impact">2 pts</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mobile top-spacing-16">
+			<div class="row action-header">
+				<img src="./simulator-icon.svg" class="action-icon" alt="Increase Limit Icon" />
+				<p class="action-text column">Increase credit limit</p>
+			</div>
+			<div class="action-body">
+				<p class="action-account">BK OF AMER #456 9356 ****</p>
+				<p class="top-spacing-4">
+					Making a payment on this acount could result in a 3 point score increaase.
+				</p>
+				<div class="row gap-28 top-spacing-28">
+					<div class="column">
+						<p>TransUnion</p>
+					</div>
+					<div class="column">
+						<p>Equifax</p>
+					</div>
+					<div class="column">
+						<p>Experian</p>
+					</div>
+				</div>
+				<div class="row gap-28 top-spacing-10">
+					<div class="column">
+						<div class="row">
+							<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+							<p class="action-impact">3 pts</p>
+						</div>
+					</div>
+					<div class="column">
+						<div class="row">
+							<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+							<p class="action-impact">3 pts</p>
+						</div>
+					</div>
+					<div class="column">
+						<div class="row">
+							<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+							<p class="action-impact">3 pts</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mobile top-spacing-16">
+			<div class="row action-header">
+				<img src="./pay-icon.svg" class="action-icon pay-icon" alt="Pay Icon" />
+				<p class="action-text column">Pay down debt</p>
+			</div>
+			<div class="action-body">
+				<p class="action-account">BK OF AMER #456 9356 ****</p>
+				<p class="top-spacing-4">
+					Making a payment on this acount could result in a 2 point score increaase.
+				</p>
+				<div class="row gap-28 top-spacing-28">
+					<div class="column">
+						<p>TransUnion</p>
+					</div>
+					<div class="column">
+						<p>Equifax</p>
+					</div>
+					<div class="column">
+						<p>Experian</p>
+					</div>
+				</div>
+				<div class="row gap-28 top-spacing-10">
+					<div class="column">
+						<div class="row">
+							<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+							<p class="action-impact">2 pts</p>
+						</div>
+					</div>
+					<div class="column">
+						<div class="row">
+							<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+							<p class="action-impact">2 pts</p>
+						</div>
+					</div>
+					<div class="column">
+						<div class="row">
+							<img src="./triangle-icon.svg" class="action-icon" alt="Score Increase" />
+							<p class="action-impact">2 pts</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<p class="top-spacing-36 footer">
+			<span class="semi-bold">Important:</span> Based on taking these actions, the best day to check for score increases is the 28th of the month. Allow up to three months to achieve full results. 
+These recommendations are only estimates.  They do not take into consideration future factors like balance changes and late payments.
+		</p>
+		<p class="desktop-top-spacing-16 top-spacing-20 footer semi-bold">
+			<b>Vantage Score 3.0</b>
+		</p>
+	</div>
+</body>
+</html>

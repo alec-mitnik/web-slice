@@ -1,0 +1,690 @@
+* {
+	flex: 0 0 auto;
+	margin: 0;
+	padding: 0;
+	min-width: 0;
+	min-height: 0;
+	line-height: 1.5;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+button, input {
+	border: none;
+	background: none;
+	appearance: none;
+	line-height: 1.5;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+button:not(:focus-visible), input:not(:focus-visible) {
+	outline: none;
+}
+
+button:not(:disabled) {
+	cursor: pointer;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	padding: 32px 20px;
+	background: #ffffff;
+	display: flex;
+	flex-direction: column;
+	color: #3E3F42;
+	font-family: Heebo;
+	font-size: 0.875rem;
+}
+
+h1 {
+	font-size: 1.375rem;
+	font-weight: 500;
+	color: #1665D8;
+}
+
+h2 {
+	font-size: 1.125rem;
+	font-weight: 500;
+}
+
+h2:not(.subheader) {
+	color: #07025B;
+}
+
+h3 {
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+.semi-bold {
+	font-weight: 500;
+}
+
+/* Could be simplified to just a mixin with Sass */
+.top-spacing-48 {
+	margin-top: 48px;
+}
+
+.top-spacing-44 {
+	margin-top: 44px;
+}
+
+.top-spacing-40 {
+	margin-top: 40px;
+}
+
+.top-spacing-36 {
+	margin-top: 36px;
+}
+
+.top-spacing-32 {
+	margin-top: 32px;
+}
+
+.top-spacing-30 {
+	margin-top: 30px;
+}
+
+.top-spacing-28 {
+	margin-top: 28px;
+}
+
+.top-spacing-24 {
+	margin-top: 24px;
+}
+
+.top-spacing-20 {
+	margin-top: 20px;
+}
+
+.top-spacing-16 {
+	margin-top: 16px;
+}
+
+.top-spacing-12 {
+	margin-top: 12px;
+}
+
+.top-spacing-10 {
+	margin-top: 10px;
+}
+
+.top-spacing-8 {
+	margin-top: 8px;
+}
+
+.top-spacing-4 {
+	margin-top: 4px;
+}
+
+.relative {
+	position: relative;
+}
+
+.row {
+	display: flex;
+}
+
+.row-align-center {
+	align-items: center;
+}
+
+.column {
+	flex: 1;
+}
+
+.column.column-2 {
+	flex: 2;
+}
+
+.column.column-3 {
+	flex: 3;
+}
+
+.column.column-4 {
+	flex: 4;
+}
+
+.column.column-5 {
+	flex: 5;
+}
+
+.gap-36 {
+	gap: 36px;
+}
+
+.gap-28 {
+	gap: 28px;
+}
+
+.gap-24 {
+	gap: 24px;
+}
+
+.gap-18 {
+	gap: 18px;
+}
+
+.gap-8 {
+	gap: 8px;
+}
+
+.tab-navigation {
+	display: flex;
+	position: relative;
+}
+
+.tab-navigation::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border: 1px solid #D7DEE4;
+	background: #D7DEE4;
+	height: 3px;
+	border-radius: 999999px; /* pill shape */
+}
+
+.tab {
+	padding-bottom: 16px;
+	position: relative;
+}
+
+.tab:not(:first-child) {
+	margin-left: 41px;
+}
+
+.tab:not(.selected) {
+	opacity: 0.5;
+}
+
+.tab.selected::after {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border: 1px solid #27D381;
+	background: #27D381;
+	height: 3px;
+	border-radius: 999999px; /* pill shape */
+}
+
+.box {
+	border-radius: 8px;
+	background: #F9FAFB;
+	padding: 14px 20px;
+}
+
+.target-input {
+	border: 1px solid #D7DEE4;
+	border-radius: 4px;
+	font-size: 1.375rem;
+	font-weight: 500;
+	padding: 9px 14px 7px;
+	height: 100%;
+	width: 100%;
+}
+
+.target-button {
+	border-radius: 4px;
+	background: #27D381;
+	color: #ffffff;
+	padding: 9px;
+	height: 100%;
+	width: 100%;
+	font-size: 1rem;
+}
+
+.target-range {
+	width: 100%;
+	height: 14px;
+	border-radius: 4px;
+	background: #F1C531;
+	background: linear-gradient(90deg, #F53758 47.27%, #F1C531 47.27%, #F1C531 81.82%, #27D381 81.82%);
+}
+
+.target-range:not(:disabled)::-webkit-slider-thumb {
+	cursor: pointer;
+}
+
+.target-range:not(:disabled)::-moz-range-thumb {
+	cursor: pointer;
+}
+
+.target-range:not(:disabled)::-ms-thumb {
+	cursor: pointer;
+}
+
+.target-range::-webkit-slider-thumb {
+	appearance: none;
+	height: 27px;
+	width: 18px;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+	
+	/* Would need to dynamically change the color when the value changes */
+	background: url('./current.svg') center;
+}
+
+.target-range::-moz-range-thumb {
+	appearance: none;
+	height: 27px;
+	width: 18px;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+	
+	/* Would need to dynamically change the color when the value changes */
+	background: url('./current.svg') center;
+}
+
+.target-range::-ms-thumb {
+	appearance: none;
+	height: 27px;
+	width: 18px;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+	
+	/* Would need to dynamically change the color when the value changes */
+	background: url('./current.svg') center;
+}
+
+.target-range-label {
+	color: #6B6C6F;
+	font-size: 0.75rem;
+	position: absolute;
+}
+
+#target-range-label-300 {
+	position: static; /* Have one non-absolute label to set content height */
+}
+
+#target-range-label-560 {
+	left: 47.27%;
+	transform: translateX(-50%);
+}
+
+#target-range-label-750 {
+	left: 81.82%;
+	transform: translateX(-50%);
+}
+
+#target-range-label-850 {
+	right: 0;
+}
+
+.credit-logo {
+	max-width: 100%;
+	display: block;
+}
+
+#credit-logo-transunion {
+	width: 70px;
+}
+
+#credit-logo-equifax {
+	width: 54px;
+	transform: translateY(90%);
+}
+
+#credit-logo-experian {
+	width: 64px;
+	transform: translateY(12%);
+}
+
+.horizontal-line {
+	border-bottom: 1px solid #EBEBEB;
+}
+
+.credit-score {
+	font-size: 2.25rem;
+	font-weight: 700;
+}
+
+.impact {
+	color: #07025B;
+}
+
+.rounded-border-impact-container {
+	border: 1px solid #D7DEE4;
+	border-radius: 6px;
+	padding: 18px;
+}
+
+.actions-impact-container {
+	border: 1px solid #D7DEE4;
+	border-bottom-width: 0;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	padding: 36px 0 16px;
+}
+
+.recommended-actions-left-spacing {
+	padding-left: 29px; /* Account for 1px border */
+}
+
+.potential-impact-right-spacing {
+	padding-right: 29px; /* Account for 1px border */
+}
+
+.impact-info {
+	margin-left: 4px;
+	text-align: center;
+}
+
+.impact-icon {
+	display: block;
+	transform: scale(0.7);
+    transform-origin: top;
+}
+
+.impact-change {
+	font-size: 0.75rem;
+	font-weight: bold;
+	transform: translateY(-3px);
+}
+
+.action-column-header {
+	color: #6B6C6F;
+}
+
+.actions {
+	border-top: 1px solid #85A2CF;
+}
+
+.action {
+	border: 1px solid #85A2CF;
+	border-top-width: 0;
+	background-color: #F5FAFF;
+	padding: 24px 0;
+}
+
+.action:last-child {
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.action-header {
+	border: 1px solid #D7DEE4;
+	border-bottom-width: 0;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	background-color: #F5FAFF;
+	padding: 16px 18px 12px;
+}
+
+.action-header .action-icon {
+	transform: translateY(-2%) scale(1.125);
+}
+
+.action-body {
+	border: 1px solid #D7DEE4;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	padding: 28px 18px 24px;
+}
+
+.action-body .action-icon {
+	transform: translateY(-2%) scale(0.83);
+}
+
+.action-icon {
+	transform: translateY(-2%);
+}
+
+.pay-icon {
+	margin-left: 3px;
+	margin-right: 2px;
+}
+
+.action-text {
+	font-size: 1rem;
+	font-weight: 500;
+	color: #1665D8;
+	margin-left: 12px;
+}
+
+.action-account {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.action-impact {
+	font-weight: bold;
+	color: #110630;
+	margin-left: 6px;
+}
+
+@media (max-width: 1199.9px) {
+	.desktop {
+		display: none !important;
+	}
+	
+	.mobile-column-reverse {
+		flex-direction: column-reverse;
+	}
+	
+	h2.subheader {
+		font-size: 0.875rem;
+	}
+	
+	.box h3 {
+		font-size: 1rem;
+	}
+	
+	.mobile-gray {
+		color: #6B6C6F;
+	}
+}
+
+@media (min-width: 1200px) {
+	.mobile {
+		display: none !important;
+	}
+	
+	body {
+		padding: 48px 164px;
+		font-size: 1rem;
+	}
+	
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.25rem;
+	}
+
+	h3 {
+		font-size: 1rem;
+	}
+
+	/* Could be simplified to just a mixin with Sass */
+	.desktop-top-spacing-48 {
+		margin-top: 48px;
+	}
+
+	.desktop-top-spacing-44 {
+		margin-top: 44px;
+	}
+
+	.desktop-top-spacing-40 {
+		margin-top: 40px;
+	}
+
+	.desktop-top-spacing-36 {
+		margin-top: 36px;
+	}
+
+	.desktop-top-spacing-32 {
+		margin-top: 32px;
+	}
+
+	.desktop-top-spacing-30 {
+		margin-top: 30px;
+	}
+
+	.desktop-top-spacing-28 {
+		margin-top: 28px;
+	}
+
+	.desktop-top-spacing-24 {
+		margin-top: 24px;
+	}
+
+	.desktop-top-spacing-20 {
+		margin-top: 20px;
+	}
+
+	.desktop-top-spacing-16 {
+		margin-top: 16px;
+	}
+
+	.desktop-top-spacing-12 {
+		margin-top: 12px;
+	}
+
+	.desktop-top-spacing-10 {
+		margin-top: 10px;
+	}
+
+	.desktop-top-spacing-8 {
+		margin-top: 8px;
+	}
+
+	.desktop-top-spacing-4 {
+		margin-top: 4px;
+	}
+
+	.desktop-top-spacing-0 {
+		margin-top: 0;
+	}
+
+	.desktop-gap-36 {
+		gap: 36px;
+	}
+
+	.desktop-gap-28 {
+		gap: 28px;
+	}
+
+	.desktop-gap-24 {
+		gap: 24px;
+	}
+
+	.desktop-gap-18 {
+		gap: 18px;
+	}
+
+	.desktop-gap-8 {
+		gap: 18px;
+	}
+	
+	.tab {
+		padding-bottom: 11px;
+	}
+	
+	.box {
+		padding: 26px 30px;
+	}
+
+	#credit-logo-transunion {
+		width: 85px;
+	}
+
+	#credit-logo-equifax {
+		width: 70px;
+		transform: translateY(75%);
+	}
+
+	#credit-logo-experian {
+		width: 75px;
+	}
+	
+	.credit-score {
+		font-size: 2.75rem;
+	}
+
+	.potential-impact-right-spacing-no-border {
+		padding-right: 31px;
+		margin-right: -1px;
+	}
+	
+	.target-input {
+		font-size: 1.5rem;
+		padding: 6px 14px;
+	}
+
+	.target-range::-webkit-slider-thumb {
+		height: 28px;
+		width: 28px;
+		border-radius: 999999px;
+		box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
+		
+		/* Would need to dynamically change the color when the value changes */
+		background: url('./point.svg') center;
+	}
+
+	.target-range::-moz-range-thumb {
+		height: 28px;
+		width: 28px;
+		border-radius: 999999px;
+		box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
+		
+		/* Would need to dynamically change the color when the value changes */
+		background: url('./point.svg') center;
+	}
+
+	.target-range::-ms-thumb {
+		height: 28px;
+		width: 28px;
+		border-radius: 999999px;
+		box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
+		
+		/* Would need to dynamically change the color when the value changes */
+		background: url('./point.svg') center;
+	}
+
+	.target-range-label {
+		font-size: 0.875rem;
+	}
+
+	.impact-icon {
+		transform: scale(0.9);
+	}
+
+	.impact-change {
+		font-size: 0.875rem;
+	}
+	
+	.action-account {
+		font-size: 0.875rem;
+	}
+	
+	.action-impact {
+		font-size: 1.25rem;
+		margin-left: 10px;
+	}
+
+	.footer {
+		padding: 0 28px;
+	}
+}
